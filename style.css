@@ -14,7 +14,7 @@
 }
 html { scroll-behavior: smooth; scroll-padding-top: 75px; }
 .nav { width: min(1160px, calc(100% - 64px)); margin: 36px auto 0; display: flex; align-items: center; justify-content: center; position: relative; z-index: 3; }
-.brand { position: absolute; left: 50%; transform: translateX(-50%); text-decoration: none; font: 600 44px var(--serif); letter-spacing: 1px; color: #fff; }
+.brand { position: absolute; left: 50%; transform: translateX(-50%); text-decoration: none; font: 600 100px var(--serif); letter-spacing: 1px; color: #fff; }
 .brand span { color: var(--gold); font-family: var(--script); }
 .nav-links { margin-left: auto; display: flex; gap: 30px; }
 .hero { min-height: 760px; height: 100svh; max-height: 1000px; position: relative; color: white; background: linear-gradient(180deg, rgba(36,13,19,.45), rgba(53,12,22,.76)), url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=90") center 48%/cover no-repeat; display: flex; flex-direction: column; }
