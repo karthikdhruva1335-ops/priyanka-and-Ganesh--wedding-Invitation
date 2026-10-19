@@ -31,6 +31,17 @@ button { font: inherit; }
 .hero .eyebrow { color: #f0d9b3; }
 .script { font-family: var(--script); font-weight: 400; }
 .intro { font-size: clamp(27px, 4vw, 42px); margin: 16px 0 -4px; color: #f0d9b3; }
+/* Default or desktop size */
+.brand {
+    font-size: 1.8rem; 
+}
+
+/* Mobile view (screens up to 768px wide) */
+@media screen and (max-width: 768px) {
+    .brand {
+        font-size: 2.4rem; /* Increase this value to make it larger on mobile */
+    }
+}
 h1 { font: 500 clamp(58px, 9vw, 108px)/.88 var(--serif); letter-spacing: 1px; margin: 20px 0 18px; text-shadow: 0 2px 18px #0004; }
 .ampersand { color: #e7c58b; font-family: var(--script); font-size: .85em; }
 .ornament-line { width: 180px; border-top: 1px solid #dfc18b; margin: 28px auto 20px; height: 1px; position: relative; }
