@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#6e1e2a">
   <meta name="description" content="Wedding invitation for Ganesh and Priyanka — 29 October 2026.">
-  <title>Ganesh  &  Priyanka | Wedding Invitation</title>
+  <title>Ganesh & Priyanka | Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+  <!-- Cover Page Section (Initial Overlay) -->
+  <div id="cover-page" class="cover-container">
+    <div class="hero-content">
+      <p class="eyebrow">WITH THE BLESSINGS OF OUR FAMILIES</p>
+      <p class="script intro">Together with our families</p>
+      <h1>Ganesh<br><span class="ampersand">&</span><br>Priyanka</h1>
+      <div class="ornament-line"><span>❦</span></div>
+      <p class="hero-subtitle">THIS INVITATION IS EXCLUSIVELY FOR YOU </p>
+      <a class="button button-light" href="javascript:void(0);" onclick="openInvitation()">Open Invitation <span>↓</span></a>
+    </div>
+  </div>
+
   <div class="top-ornament" aria-hidden="true">✦ ❧ ✦</div>
   <header class="hero" id="home">
     <nav class="nav">
@@ -24,23 +37,16 @@
         <a href="#venue">Venue</a>
       </div>
     </nav>
-   <body>
-  <!-- Cover Page Section -->
-  <div id="cover-page" class="cover-container">
+    
     <div class="hero-content">
       <p class="eyebrow">WITH THE BLESSINGS OF OUR FAMILIES</p>
       <p class="script intro">Together with our families</p>
       <h1>Ganesh<br><span class="ampersand">&</span><br>Priyanka</h1>
       <div class="ornament-line"><span>❦</span></div>
       <p class="hero-subtitle">THIS INVITATION IS EXCLUSIVELY FOR YOU </p>
-      <a class="button button-light" href="javascript:void(0);" onclick="openInvitation()">Open Invitation <span>↓</span></a>
+      <a class="button button-light" href="#story">Explore Invitation <span>↓</span></a>
     </div>
-  </div>
-
-  <!-- Rest of your website content starts here -->
-  <div class="main-content">
-    <!-- Your story, gallery, event sections go here -->
-  </div>
+    
     <div class="hero-bottom">A NEW CHAPTER BEGINS</div>
   </header>
 
@@ -104,8 +110,6 @@
       </div>
     </section>
 
-   
-
     <section class="closing-section">
       <div class="closing-flourish">❦</div>
       <p class="script">Your presence is our present</p>
@@ -125,6 +129,13 @@
     <img id="lightbox-image" src="" alt="Expanded wedding photograph">
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  
   <script src="script.js"></script>
+  <script>
+    function openInvitation() {
+      const cover = document.getElementById('cover-page');
+      cover.classList.add('cover-hidden');
+    }
+  </script>
 </body>
 </html>
