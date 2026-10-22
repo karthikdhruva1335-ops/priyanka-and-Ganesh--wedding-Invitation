@@ -93,6 +93,7 @@ h1 { font: 500 clamp(58px, 9vw, 108px)/.88 var(--serif); letter-spacing: 1px; ma
 /* Gallery Grid Layout */
 .gallery-section { 
   background: var(--cream); 
+  padding-bottom: 50px; /* Crucial: Prevents images from overflowing into the section below */
 }
 
 .gallery-grid { 
@@ -101,6 +102,7 @@ h1 { font: 500 clamp(58px, 9vw, 108px)/.88 var(--serif); letter-spacing: 1px; ma
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 16px; 
+  box-sizing: border-box;
 }
 
 .gallery-grid img { 
@@ -112,7 +114,7 @@ h1 { font: 500 clamp(58px, 9vw, 108px)/.88 var(--serif); letter-spacing: 1px; ma
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform .4s ease, box-shadow .4s ease;
   cursor: zoom-in;
-  background-color: #e8d9c8; /* Fallback color */
+  background-color: #e8d9c8;
 }
 
 .gallery-grid img:hover { 
@@ -121,12 +123,17 @@ h1 { font: 500 clamp(58px, 9vw, 108px)/.88 var(--serif); letter-spacing: 1px; ma
 }
 
 @media (max-width: 700px) {
-  .gallery-grid { 
-    grid-template-columns: 1fr; /* Stack vertically on small screens */
-    padding: 0 10px;
+  .gallery-section {
+    padding-bottom: 40px; /* Ensures padding scales on mobile */
   }
-  .gallery-grid img {
-    height: 320px;
+
+  .gallery-grid { 
+    grid-template-columns: 1fr; 
+    padding: 0 16px; /* Adds safe side margins on mobile screens */
+  }
+  
+  .gallery-grid img { 
+    height: 300px; /* Slightly adjusted mobile height to prevent excessive stretching */
   }
 }
 .music-strip { display: flex; align-items: center; justify-content: center; gap: 60px; padding: 48px 24px; background: #eee2d0; }
